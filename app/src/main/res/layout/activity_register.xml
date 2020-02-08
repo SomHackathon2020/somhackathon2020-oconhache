@@ -137,10 +137,15 @@
         android:id="@+id/registerButton"
         android:layout_width="326dp"
         android:layout_height="39dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginLeft="38dp"
         android:layout_marginTop="29dp"
+        android:layout_marginEnd="47dp"
+        android:layout_marginRight="47dp"
         android:text="Button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/formation"
-        tools:layout_editor_absoluteX="38dp"
         tools:text="REGISTRAR" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
