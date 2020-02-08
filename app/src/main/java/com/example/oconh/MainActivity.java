@@ -108,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
         sqLiteDatabase.close();
     }
 
-  //Posible ayuda para
+  //Posible ayuda para busqueda,caldria trasladar la lista de usuarioa aqui
 /*
     public void searchSQLite(String columna, String valor) {
         MiBBDD_Helper dbHelper = new MiBBDD_Helper(getApplicationContext());

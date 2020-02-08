@@ -17,8 +17,6 @@ public class UserService {
         if(this.checkUserNotExist(user)){
             users.add(user);
 
-
-
         }
         throw new Exception("User or password not valids");
     }
