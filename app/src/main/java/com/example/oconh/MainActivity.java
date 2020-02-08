@@ -1,6 +1,7 @@
 package com.example.oconh;
 import android.app.Activity;
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.Menu;
@@ -9,6 +10,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+
 
 public class MainActivity extends Activity {
 
@@ -21,9 +23,19 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //Mostrar logo
+
+        Intent iin= getIntent();
+        Bundle b = iin.getExtras();
+        if(b==null) {
+            Intent intent = new Intent(getApplicationContext(), Logo.class);
+            startActivity(intent);
+        }
+
+
         setContentView(R.layout.activity_main);
         singIn = (Button) findViewById(R.id.singin);
-        //singUp = (Button) findViewById(R.id.singup);
+        singUp = (Button) findViewById(R.id.singup);
         user_name = (EditText) findViewById(R.id.name);
         user_password = (EditText) findViewById(R.id.password);
 
@@ -33,6 +45,7 @@ public class MainActivity extends Activity {
                     user_service.singIn(user_name.getText().toString(), user_password.getText().toString());
                     //Faltaria un intent aqui para cambiar de activity
                 }catch(Exception e){
+                    System.out.println('f');
                     //Credentials are not valid, show a message with it and try again
                 }
             }
@@ -40,7 +53,8 @@ public class MainActivity extends Activity {
         /*
         singUp.setOnClickListener( new View.OnClickListener(){
             public void onClick (View v){
-                //Ha de llevarte a la Activity de completar perfil
+                Intent intent=new Intent(getApplicationContext(),RegisterActivity.class);
+                startActivity(intent);
             }
         });
          */
@@ -83,7 +97,7 @@ public class MainActivity extends Activity {
         sqLiteDatabase.close();
     }
 
-  //Posible ayuda para
+  //Posible ayuda para busqueda,caldria trasladar la lista de usuarioa aqui
 /*
     public void searchSQLite(String columna, String valor) {
         MiBBDD_Helper dbHelper = new MiBBDD_Helper(getApplicationContext());

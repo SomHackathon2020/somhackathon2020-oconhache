@@ -6,32 +6,79 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:openDrawer="start">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:orientation="vertical" android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:orientation="vertical">
 
         <Button
             android:id="@+id/singin"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Sing in" />
+            android:layout_width="358dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginLeft="28dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="265dp"
+            android:background="#F1ECEC"
+            android:text="Sing in"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="Iniciar sesión" />
 
         <EditText
             android:id="@+id/name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="359dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginLeft="28dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginBottom="20dp"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Name" />
+            android:text="Name"
+            app:layout_constraintBottom_toTopOf="@+id/password"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="Nombre de usuario" />
 
         <EditText
             android:id="@+id/password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="359dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginLeft="28dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="35dp"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Password" />
-    </LinearLayout>
+            android:text="Password"
+            app:layout_constraintBottom_toTopOf="@+id/singin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="Contraseña" />
+
+        <Button
+            android:id="@+id/singup"
+            android:layout_width="412dp"
+            android:layout_height="52dp"
+            android:layout_marginBottom="36dp"
+            android:text="registrer"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="No tienes una cuenta? Regístrate" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"
