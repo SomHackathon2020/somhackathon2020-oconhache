@@ -47,12 +47,12 @@ public class MainActivity extends Activity {
             }
         });
 
-       /* singUp.setOnClickListener( new View.OnClickListener(){
+        singUp.setOnClickListener( new View.OnClickListener(){
             public void onClick (View v){
 
                //Ha de llevarte a la Activity de completar perfil
             }
-        });*/
+        });
     }
 
 
