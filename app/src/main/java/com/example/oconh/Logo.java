@@ -12,14 +12,15 @@ public class Logo extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_logo);
 
-        try {
-            Thread.sleep(5000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+
         String entrado="";
         Intent ii=new Intent(getApplicationContext(), MainActivity.class);
         ii.putExtra("name", entrado);
+        try {
+            Thread.sleep(1200);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         startActivity(ii);
 
     }

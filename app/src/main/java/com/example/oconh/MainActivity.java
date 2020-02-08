@@ -4,6 +4,9 @@ import android.content.ContentValues;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -30,8 +33,7 @@ public class MainActivity extends Activity {
         }
 
 
-        setContentView(R.layout.activity_login);
-
+        setContentView(R.layout.activity_main);
         singIn = (Button) findViewById(R.id.singin);
         singUp = (Button) findViewById(R.id.singup);
         user_name = (EditText) findViewById(R.id.name);
@@ -43,19 +45,40 @@ public class MainActivity extends Activity {
                     user_service.singIn(user_name.getText().toString(), user_password.getText().toString());
                     //Faltaria un intent aqui para cambiar de activity
                 }catch(Exception e){
+                    System.out.println('f');
                     //Credentials are not valid, show a message with it and try again
                 }
             }
         });
-
-        /*singUp.setOnClickListener( new View.OnClickListener(){
+        /*
+        singUp.setOnClickListener( new View.OnClickListener(){
             public void onClick (View v){
-
                 Intent intent=new Intent(getApplicationContext(),RegisterActivity.class);
                 startActivity(intent);
             }
-        });*/
+        });
+         */
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+        switch (item.getItemId()) {
+            case R.id.action_settings:
+               System.out.println("Click first item");
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
 
 
 
