@@ -1,6 +1,7 @@
 package com.example.oconh;
 import android.app.Activity;
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
@@ -45,7 +46,8 @@ public class MainActivity extends Activity {
         singUp.setOnClickListener( new View.OnClickListener(){
             public void onClick (View v){
 
-               //Ha de llevarte a la Activity de completar perfil
+                Intent intent=new Intent(getApplicationContext(),RegisterActivity.class);
+                startActivity(intent);
             }
         });
     }
