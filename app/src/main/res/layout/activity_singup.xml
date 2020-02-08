@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterActivity">
+    tools:context=".SingUpActivity">
 
     <TextView
         android:id="@+id/register"
@@ -16,7 +16,7 @@
         android:layout_marginEnd="193dp"
         android:layout_marginRight="193dp"
         android:layout_marginBottom="602dp"
-        android:text="REGISTRARSE"
+        android:text="TextView"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -38,7 +38,7 @@
         android:layout_marginBottom="454dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:hint="Nombre"
+        android:text="Name"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -48,7 +48,7 @@
         tools:text="Nombre" />
 
     <EditText
-        android:id="@+id/pasword"
+        android:id="@+id/password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -59,7 +59,7 @@
         android:layout_marginBottom="394dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Contraseña"
+        android:text="Name"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -78,7 +78,7 @@
         android:layout_marginBottom="20dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Correo Electrónico"
+        android:text="Name"
         app:layout_constraintBottom_toTopOf="@+id/phone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -96,7 +96,6 @@
         android:layout_marginBottom="263dp"
         android:ems="10"
         android:inputType="phone"
-        android:text="Teléfono"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -114,7 +113,7 @@
         android:layout_marginRight="38dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Formación"
+        android:text="Name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -130,7 +129,7 @@
         android:layout_marginTop="29dp"
         android:layout_marginEnd="47dp"
         android:layout_marginRight="47dp"
-        android:text="REGISTRAR"
+        android:text="Button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/formation"
