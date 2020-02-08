@@ -43,6 +43,7 @@ public class MainActivity extends Activity {
                     user_service.singIn(user_name.getText().toString(), user_password.getText().toString());
                     //Faltaria un intent aqui para cambiar de activity
                 }catch(Exception e){
+                    System.out.println('f');
                     //Credentials are not valid, show a message with it and try again
                 }
             }
