@@ -33,6 +33,7 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_login);
 
         singIn = (Button) findViewById(R.id.singin);
+        singUp = (Button) findViewById(R.id.singup);
         user_name = (EditText) findViewById(R.id.name);
         user_password = (EditText) findViewById(R.id.password);
 
