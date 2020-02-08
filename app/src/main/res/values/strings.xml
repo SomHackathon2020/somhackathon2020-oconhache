@@ -7,6 +7,16 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
+    <string name="temaGeneral">TEMA GENERAL</string>
+    <string name="day"> DÍA: </string>
+    <string name="puntuation"> Valoración: </string>
+    <string name="tema"> TEMA: </string>
+    <string name="time"> HORA: </string>
+    <string name="place"> LUGAR: </string>
+    <string name="asistants"> NUMERO DE ASISTENTES: </string>
+    <string name="description"> Descripción detallada: </string>
+
+
 
     <string name="action_perfil">Perfil</string>
     <string name="action_inscription">Inscribirse</string>
