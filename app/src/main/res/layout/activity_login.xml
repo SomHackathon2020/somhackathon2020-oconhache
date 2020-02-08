@@ -75,7 +75,9 @@
         android:id="@+id/imageView3"
         android:layout_width="418dp"
         android:layout_height="108dp"
-        app:srcCompat="@color/amarillo"
-        tools:layout_editor_absoluteX="-6dp"
-        tools:layout_editor_absoluteY="1dp" />
+        android:layout_marginTop="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@color/amarillo" />
 </androidx.constraintlayout.widget.ConstraintLayout>
