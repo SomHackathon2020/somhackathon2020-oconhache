@@ -30,7 +30,7 @@
     <string name="asistants"> NUMERO DE ASISTENTES: </string>
     <string name="description"> Descripción detallada: </string>
 
-
+    <string name="userProfile">PERFIL</string>
     <string name="action_perfil">Perfil</string>
     <string name="action_inscription">Inscribirse</string>
     <string name="action_event">Crear evento</string>
