@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     android:orientation="vertical">
 
     <Button
@@ -15,6 +16,7 @@
         android:layout_marginEnd="25dp"
         android:layout_marginRight="25dp"
         android:layout_marginBottom="265dp"
+        android:background="#F1ECEC"
         android:text="Sing in"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -28,10 +30,9 @@
         android:layout_height="52dp"
         android:layout_marginStart="28dp"
         android:layout_marginLeft="28dp"
-        android:layout_marginTop="145dp"
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
-        android:layout_marginBottom="17dp"
+        android:layout_marginBottom="20dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Name"
@@ -39,7 +40,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3"
         tools:text="Nombre de usuario" />
 
     <EditText
@@ -48,7 +48,6 @@
         android:layout_height="52dp"
         android:layout_marginStart="28dp"
         android:layout_marginLeft="28dp"
-        android:layout_marginTop="17dp"
         android:layout_marginEnd="25dp"
         android:layout_marginRight="25dp"
         android:layout_marginBottom="35dp"
@@ -57,25 +56,25 @@
         android:text="Password"
         app:layout_constraintBottom_toTopOf="@+id/singin"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name"
         tools:text="Contraseña" />
 
     <Button
         android:id="@+id/singup"
         android:layout_width="412dp"
         android:layout_height="52dp"
+        android:layout_marginBottom="36dp"
         android:text="registrer"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         tools:text="No tienes una cuenta? Regístrate" />
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="418dp"
-        android:layout_height="108dp"
-        app:srcCompat="@color/amarillo"
-        tools:layout_editor_absoluteX="-6dp"
-        tools:layout_editor_absoluteY="1dp" />
+
+
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

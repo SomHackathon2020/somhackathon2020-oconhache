@@ -20,6 +20,11 @@ public class Logo extends AppCompatActivity {
         String entrado="";
         Intent ii=new Intent(getApplicationContext(), MainActivity.class);
         ii.putExtra("name", entrado);
+        try {
+            Thread.sleep(1200);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         startActivity(ii);
 
     }
