@@ -62,7 +62,7 @@
         android:layout_marginEnd="30dp"
         android:layout_marginRight="30dp"
         android:layout_marginBottom="13dp"
-        android:text="@string/tituloTema"
+        android:text="@string/tituloTemaCreator"
         android:textSize="18sp"
 
         app:layout_constraintBottom_toTopOf="@+id/temaGeneral"
@@ -93,7 +93,7 @@
         android:layout_marginTop="96dp"
         android:layout_marginEnd="29dp"
         android:layout_marginRight="29dp"
-        android:text="@string/eventData"
+        android:text="@string/eventDataCreator"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -110,7 +110,7 @@
         android:layout_marginEnd="240dp"
         android:layout_marginRight="240dp"
         android:editable="true"
-        android:hint="@string/dia"
+        android:hint="@string/diaCreator"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/eventData" />
@@ -125,7 +125,7 @@
         android:layout_marginEnd="240dp"
         android:layout_marginRight="240dp"
         android:editable="true"
-        android:text="@string/hora"
+        android:text="@string/horaCreator"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/dia" />
@@ -140,7 +140,7 @@
         android:layout_marginEnd="240dp"
         android:layout_marginRight="240dp"
         android:editable="true"
-        android:hint="@string/lugar"
+        android:hint="@string/lugarCreator"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -155,7 +155,7 @@
         android:layout_marginEnd="3dp"
         android:layout_marginRight="3dp"
         android:layout_marginBottom="28dp"
-        android:hint="@string/aceptarButton"
+        android:hint="@string/aceptarButtonCreator"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

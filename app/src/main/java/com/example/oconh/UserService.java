@@ -6,7 +6,7 @@ public class UserService {
 
     HashSet<User> users = new HashSet<User>();
 
-    public void register(String name,String password,String age, String education, String phone, String mail) throws Exception{
+    public void register(String name,String password,int age, String education, int phone, String mail) throws Exception{
 
         User user = new User(name,password,age, education, phone, mail);
         if(this.checkUserNotExist(user)){ users.add(user); }

@@ -4,12 +4,13 @@ public class User {
 
     private String name;
     private String password;
-    private String age;
+    private int age;
     private String education;
-    private String phone;
+    private int phone;
     private String mail;
 
-    public User(String name,String password,String age, String education, String phone, String mail){
+    public User(String name,String password,int age, String education, int phone, String mail){
+
         this.name = name;
         this.password = password;
         this.age = age;
@@ -17,6 +18,7 @@ public class User {
         this.phone = phone;
         this.mail = mail;
     }
+
 
     public String getName(){
         return this.name;
@@ -32,5 +34,21 @@ public class User {
 
     public void setPassword(String password){
         this.password = password;
+    }
+
+    public int getAge(){
+        return this.age;
+    }
+
+    public String getEducation() {
+        return this.education;
+    }
+
+    public int getPhone() {
+        return this.phone;
+    }
+
+    public String getMail() {
+        return this.mail;
     }
 }
