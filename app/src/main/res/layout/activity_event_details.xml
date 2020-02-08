@@ -7,7 +7,7 @@
     tools:context=".eventDetails">
 
     <TextView
-        android:id="@+id/temaGeneral"
+        android:id="@+id/temaGeneralDetails"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="51dp"
@@ -117,15 +117,15 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="209dp"
         android:layout_marginLeft="209dp"
-        android:layout_marginTop="184dp"
         android:layout_marginEnd="72dp"
         android:layout_marginRight="72dp"
+        android:layout_marginBottom="202dp"
         android:editable="true"
         android:text="Valoración:"
+        app:layout_constraintBottom_toTopOf="@+id/description"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/day"
-        app:layout_constraintTop_toBottomOf="@+id/temaGeneral"
         tools:text="Valoración:" />
 
     <TextView
