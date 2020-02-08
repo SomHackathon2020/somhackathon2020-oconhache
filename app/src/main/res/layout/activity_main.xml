@@ -24,7 +24,7 @@
             android:layout_marginRight="25dp"
             android:layout_marginBottom="265dp"
             android:background="#F1ECEC"
-            android:text="Sing in"
+            android:text="Iniciar sesión"
             android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -42,7 +42,7 @@
             android:layout_marginBottom="20dp"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Name"
+            android:text="Nombre de usuario"
             app:layout_constraintBottom_toTopOf="@+id/password"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -60,7 +60,7 @@
             android:layout_marginBottom="35dp"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Password"
+            android:text="Contraseña"
             app:layout_constraintBottom_toTopOf="@+id/singin"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -72,14 +72,35 @@
             android:layout_width="412dp"
             android:layout_height="52dp"
             android:layout_marginBottom="36dp"
-            android:text="registrer"
+            android:text="¿No tienes una cuenta? Regístrate"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            tools:text="No tienes una cuenta? Regístrate" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            tools:text="¿No tienes una cuenta? Regístrate" />
 
+        <TextView
+            android:id="@+id/ThirdExp"
+            android:layout_width="411dp"
+            android:layout_height="57dp"
+            android:layout_marginTop="90dp"
+            android:editable="false"
+            android:text="Third Experience"
+            android:textAlignment="center"
+            android:textSize="38sp"
+            android:textStyle="bold"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            tools:text="Third Experience"
+            tools:visibility="visible" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"
         android:layout_width="wrap_content"

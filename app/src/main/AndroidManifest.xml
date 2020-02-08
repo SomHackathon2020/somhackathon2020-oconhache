@@ -4,13 +4,12 @@
 
     <application
         android:allowBackup="true"
-
         android:label="@string/app_name"
-
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".RegisterActivity"></activity>
-        <activity android:name=".Logo"></activity>
+        <activity android:name=".eventDetails"></activity>
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".Logo" />
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"

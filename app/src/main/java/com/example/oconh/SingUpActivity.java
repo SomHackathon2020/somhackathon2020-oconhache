@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class SingUpActivity extends Activity {
 
@@ -17,6 +18,7 @@ public class SingUpActivity extends Activity {
     private EditText user_mail;
     private Button register;
     private ImageView imageView;
+
 
     private UserService userService = new UserService();
 
