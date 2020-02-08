@@ -1,11 +1,34 @@
 <resources>
     <string name="app_name">OCONH</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
+
+    //eventCreator
+    <string name="events">CREAR EVENTO</string>
+    <string name="tituloTemaCreator">INTRODUCE EL TEMA</string>
+    <string name="temaGeneralCreator">Tema General:</string>
+    <string name="temaCreator">Tema:</string>
+    <string name="descriptionCreator">Descripción: </string>
+    <string name="eventDataCreator">RELLENA LOS DATOS: </string>
+    <string name="diaCreator">Dia: </string>
+    <string name="horaCreator">Hora: </string>
+    <string name="lugarCreator">Lugar: </string>
+    <string name="aceptarButtonCreator">ACEPTAR</string>
+
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
+
+    //eventDetails
+    <string name="temaGeneral">TEMA GENERAL</string>
+    <string name="day"> DÍA: </string>
+    <string name="puntuation"> Valoración: </string>
+    <string name="tema"> TEMA: </string>
+    <string name="time"> HORA: </string>
+    <string name="place"> LUGAR: </string>
+    <string name="asistants"> NUMERO DE ASISTENTES: </string>
+    <string name="description"> Descripción detallada: </string>
 
 
     <string name="action_perfil">Perfil</string>
