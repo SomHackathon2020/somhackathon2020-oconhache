@@ -8,7 +8,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".eventDetails"></activity>
-        <activity android:name=".RegisterActivity" />
         <activity android:name=".Logo" />
         <activity
             android:name=".MainActivity"
