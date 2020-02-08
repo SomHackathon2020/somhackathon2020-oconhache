@@ -1,5 +1,8 @@
 package com.example.oconh;
 
+import android.content.ContentValues;
+import android.database.sqlite.SQLiteDatabase;
+
 import com.example.oconh.User;
 
 import java.util.HashSet;
