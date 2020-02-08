@@ -1,20 +1,11 @@
 package com.example.oconh;
 import android.app.Activity;
 import android.content.ContentValues;
-import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
-
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class MainActivity extends Activity {
 
@@ -22,23 +13,41 @@ public class MainActivity extends Activity {
     private EditText user_name;
     private EditText user_password;
     private Button singIn;
-    private Button singup;
+    private Button singUp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        setContentView(R.layout.activity_logo);
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         setContentView(R.layout.activity_login);
+
         singIn = (Button) findViewById(R.id.singin);
         user_name = (EditText) findViewById(R.id.name);
         user_password = (EditText) findViewById(R.id.password);
 
         singIn.setOnClickListener( new View.OnClickListener(){
             public void onClick (View v){
-                user_service.singIn(user_name.getText().toString(), user_password.getText().toString());
+                try{
+                    user_service.singIn(user_name.getText().toString(), user_password.getText().toString());
+                    //Faltaria un intent aqui para cambiar de activity
+                }catch(Exception e){
+                    //Credentials are not valid, show a message with it and try again
+                }
             }
         });
 
+        singUp.setOnClickListener( new View.OnClickListener(){
+            public void onClick (View v){
 
+               //Ha de llevarte a la Activity de completar perfil
+            }
+        });
     }
 
 
@@ -58,7 +67,7 @@ public class MainActivity extends Activity {
         sqLiteDatabase.close();
     }
 
-  //Posible ayuda para
+  //Posible ayuda para busqueda,caldria trasladar la lista de usuarioa aqui
 /*
     public void searchSQLite(String columna, String valor) {
         MiBBDD_Helper dbHelper = new MiBBDD_Helper(getApplicationContext());
