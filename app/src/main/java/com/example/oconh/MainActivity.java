@@ -53,7 +53,7 @@ public class MainActivity extends Activity {
 
         singUp.setOnClickListener( new View.OnClickListener(){
             public void onClick (View v){
-                Intent intent=new Intent(getApplicationContext(),RegisterActivity.class);
+                Intent intent=new Intent(getApplicationContext(),SingUpActivity.class);
                 startActivity(intent);
             }
         });
