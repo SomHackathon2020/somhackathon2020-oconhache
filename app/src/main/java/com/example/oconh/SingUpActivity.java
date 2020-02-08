@@ -1,7 +1,6 @@
 package com.example.oconh;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -29,9 +28,9 @@ public class SingUpActivity extends Activity {
 
         user_name = findViewById(R.id.name);
         user_password = findViewById(R.id.password);
-        user_education = findViewById(R.id.formation);
-        user_phone = findViewById(R.id.phone);
-        user_mail = findViewById(R.id.gmail);
+        user_education = findViewById(R.id.formationSignUp);
+        user_phone = findViewById(R.id.phoneSignUp);
+        user_mail = findViewById(R.id.correoSignUp);
 
 
         register = findViewById(R.id.registerButton);
