@@ -7,15 +7,15 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class eventCreator extends AppCompatActivity {
-    private TextView eventCreationTitle;
-    private TextView temaGeneral;
-    private TextView tituloTema;
-    private TextView description;
-    private TextView eventData;
-    private TextView dia;
-    private TextView hora;
-    private TextView lugar;
-    private Button aceptarButton;
+    private TextView eventCreationTitleCreator;
+    private TextView temaGeneralCreator;
+    private TextView tituloTemaCreator;
+    private TextView descriptionCreator;
+    private TextView eventDataCreator;
+    private TextView diaCreator;
+    private TextView horaCreator;
+    private TextView lugarCreator;
+    private Button aceptarButtonCreator;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
