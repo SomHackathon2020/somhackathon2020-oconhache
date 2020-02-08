@@ -9,7 +9,7 @@
 
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".RegisterActivity"></activity>
+        <activity android:name=".SingUpActivity"></activity>
         <activity android:name=".Logo"></activity>
         <activity
             android:name=".MainActivity"

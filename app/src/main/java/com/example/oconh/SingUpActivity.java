@@ -1,6 +1,7 @@
 package com.example.oconh;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -11,36 +12,52 @@ public class SingUpActivity extends Activity {
 
     private EditText user_name;
     private EditText user_password;
-    private EditText user_age;
     private EditText user_education;
     private EditText user_phone;
     private EditText user_mail;
     private Button register;
     private ImageView imageView;
 
+    private DBAdapter mDBAdapter;
+
     private UserService userService = new UserService();
 
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //setContentView(R.layout.singUp);
+        setContentView(R.layout.activity_singup);
+
+        user_name = findViewById(R.id.name);
+        user_password = findViewById(R.id.password);
+        user_education = findViewById(R.id.formation);
+        user_phone = findViewById(R.id.phone);
+        user_mail = findViewById(R.id.gmail);
+
+
+        register = findViewById(R.id.registerButton);
+
+        register.setOnClickListener( new View.OnClickListener(){
+            public void onClick (View v){
+                String name = user_name.getText().toString();
+                String password = user_password.getText().toString();
+                int age =  21;
+                String education = user_education.getText().toString();
+                int phone = Integer.valueOf(user_phone.getText().toString());
+                String mail = user_mail.getText().toString();
+
+                try{
+                    User user = new User(name,password,age, education, phone, mail);
+                    userService.register(name,password,age, education, phone, mail);
+                    mDBAdapter = DBAdapter.getInstance(getApplicationContext());
+
+                    //mDBAdapter.getUser(user);
+                    System.out.println("hhh");
+                }catch(Exception e){
+                    //e.getMessage();
+                }
+            }
+        });
 
     }
 
-    private View.OnClickListener singUpListener = new View.OnClickListener() {
-        public void onClick(View v) {
-            String name = user_name.getText().toString();
-            String password = user_password.getText().toString();
-            String age = user_age.getText().toString();
-            String education = user_education.getText().toString();
-            String phone = user_phone.getText().toString();
-            String mail = user_mail.getText().toString();
-
-            try{
-                userService.register(name,password,age, education, phone, mail);
-            }catch(Exception e){
-                //e.getMessage();
-            }
-        }
-    };
 }
