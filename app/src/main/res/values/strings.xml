@@ -1,6 +1,19 @@
 <resources>
     <string name="app_name">OCONH</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
+
+    //eventCreator
+    <string name="events">CREAR EVENTO</string>
+    <string name="tituloTema">INTRODUCE EL TEMA</string>
+    <string name="temaGeneral">Tema General:</string>
+    <string name="tema">Tema:</string>
+    <string name="description">Descripción: </string>
+    <string name="eventData">RELLENA LOS DATOS: </string>
+    <string name="dia">Dia: </string>
+    <string name="hora">Hora: </string>
+    <string name="lugar">Lugar: </string>
+    <string name="aceptarButton">ACEPTAR</string>
+
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>
     <string name="nav_header_subtitle">android.studio@android.com</string>
