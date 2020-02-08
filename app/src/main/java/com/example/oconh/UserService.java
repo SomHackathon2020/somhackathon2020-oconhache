@@ -1,10 +1,5 @@
 package com.example.oconh;
 
-import android.content.ContentValues;
-import android.database.sqlite.SQLiteDatabase;
-
-import com.example.oconh.User;
-
 import java.util.HashSet;
 
 public class UserService {
@@ -22,10 +17,17 @@ public class UserService {
         return !this.users.contains(user);
     }
 
-    public boolean singIn(String user_name, String password){
+    public boolean singIn(String user_name, String password) throws Exception{
+        return this.checkCredentialsAreValid(user_name, password);
+    }
 
-        return true;
-
+    private boolean checkCredentialsAreValid(String user_name, String password) throws Exception{
+        for(User user: this.users){
+            if(user.getName().equals(user_name) && user.getPassword().equals(password)){
+                return true;
+            }
+        }
+        throw new Exception("Credential not valid");
     }
 
 }
