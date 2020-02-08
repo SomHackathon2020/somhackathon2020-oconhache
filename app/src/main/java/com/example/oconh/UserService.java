@@ -1,5 +1,8 @@
 package com.example.oconh;
 
+import android.content.ContentValues;
+import android.database.sqlite.SQLiteDatabase;
+
 import com.example.oconh.User;
 
 import java.util.HashSet;
@@ -11,7 +14,12 @@ public class UserService {
     public void register(String user_name, String password) throws Exception{
 
         User user = new User(user_name, password);
-        if(this.checkUserNotExist(user)){ users.add(user); }
+        if(this.checkUserNotExist(user)){
+            users.add(user);
+
+
+
+        }
         throw new Exception("User or password not valids");
     }
 
