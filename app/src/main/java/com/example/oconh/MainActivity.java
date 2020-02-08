@@ -8,24 +8,28 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+
 public class MainActivity extends Activity {
 
     private UserService user_service = new UserService();
     private EditText user_name;
     private EditText user_password;
     private Button singIn;
-    private Button singUp;
+   // private Button singUp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //Mostrar logo
 
-        setContentView(R.layout.activity_logo);
-        try {
-            Thread.sleep(500);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+        Intent iin= getIntent();
+        Bundle b = iin.getExtras();
+        if(b==null) {
+            Intent intent = new Intent(getApplicationContext(), Logo.class);
+            startActivity(intent);
         }
+
+
         setContentView(R.layout.activity_login);
 
         singIn = (Button) findViewById(R.id.singin);
@@ -44,13 +48,13 @@ public class MainActivity extends Activity {
             }
         });
 
-        singUp.setOnClickListener( new View.OnClickListener(){
+        /*singUp.setOnClickListener( new View.OnClickListener(){
             public void onClick (View v){
 
                 Intent intent=new Intent(getApplicationContext(),RegisterActivity.class);
                 startActivity(intent);
             }
-        });
+        });*/
     }
 
 
