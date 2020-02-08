@@ -46,4 +46,9 @@
     //Calendario
     <string name="calendarioTITULO">Calendario</string>
 
+
+    <string name="name">Nombre de usuario</string>
+    <string name="password">Contraseña</string>
+    <string name="hola">melocoton</string>
+
 </resources>
