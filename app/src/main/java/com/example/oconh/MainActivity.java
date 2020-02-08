@@ -98,8 +98,8 @@ public class MainActivity extends AppCompatActivity {
     public void writeSQLite(User user) {
 
         ContentValues contentValues = new ContentValues();
-       // contentValues.put(MiBBDD.EntradaBBDD.COLUMNA1, user.getName());
-       // contentValues.put(MiBBDD.EntradaBBDD.COLUMNA2, user.getPassword());
+        contentValues.put(MiBBDD.EntradaBBDD.COLUMNA1, user.getName());
+        contentValues.put(MiBBDD.EntradaBBDD.COLUMNA2, user.getPassword());
 
         MiBBDD_Helper dbHelper = new MiBBDD_Helper(getApplicationContext());
         SQLiteDatabase sqLiteDatabase = dbHelper.getWritableDatabase();
