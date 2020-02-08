@@ -39,7 +39,6 @@ public class SingUpActivity extends Activity {
             }catch(Exception e){
                 //e.getMessage();
             }
-
         }
     };
 }
