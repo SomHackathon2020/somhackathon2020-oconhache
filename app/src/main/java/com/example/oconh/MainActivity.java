@@ -50,7 +50,8 @@ public class MainActivity extends Activity {
         singUp.setOnClickListener( new View.OnClickListener(){
             public void onClick (View v){
 
-               //Ha de llevarte a la Activity de completar perfil
+                Intent intent=new Intent(getApplicationContext(),RegisterActivity.class);
+                startActivity(intent);
             }
         });
     }
