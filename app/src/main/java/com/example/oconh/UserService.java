@@ -23,7 +23,7 @@ public class UserService {
 
     private boolean checkCredentialsAreValid(String user_name, String password) throws Exception{
         for(User user: this.users){
-            if(user.getName().equals(user_name) && user.getPassword().equals(password)){
+            if(user.getName().equalsIgnoreCase(user_name) && user.getPassword().equalsIgnoreCase(password)){
                 return true;
             }
         }
