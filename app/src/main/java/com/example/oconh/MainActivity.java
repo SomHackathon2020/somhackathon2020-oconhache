@@ -15,7 +15,7 @@ public class MainActivity extends Activity {
     private EditText user_name;
     private EditText user_password;
     private Button singIn;
-   // private Button singUp;
+    private Button singUp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
