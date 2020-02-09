@@ -1,25 +1,38 @@
 package com.example.oconh;
 
 public class Entidad {
-    private int imgFoto;
-    private String titulo;
-    private String contenido;
 
-    public Entidad(int imgFoto, String titulo, String contenido) {
-        this.imgFoto = imgFoto;
-        this.titulo = titulo;
-        this.contenido = contenido;
+    private String day;
+    private String description;
+    private String hour;
+    private String place;
+    private String tema;
+
+    public Entidad(String day,String description,String hour,String place,String tema) {
+       this.day = day;
+       this.description = description;
+       this.hour = hour;
+       this.place = place;
+       this.tema = tema;
     }
 
-    public int getImgFoto() {
-        return imgFoto;
+    public String getDay() {
+        return day;
     }
 
-    public String getTitulo() {
-        return titulo;
+    public String getDescription() {
+        return description;
     }
 
-    public String getContenido() {
-        return contenido;
+    public String getHour() {
+        return hour;
+    }
+
+    public String getPlace() {
+        return place;
+    }
+
+    public String getTema() {
+        return tema;
     }
 }
