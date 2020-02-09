@@ -35,7 +35,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/eventCreationTitle" />
 
-    <TextView
+    <EditText
         android:id="@+id/tema"
         android:layout_width="299dp"
         android:layout_height="49dp"
@@ -72,7 +72,7 @@
         app:layout_constraintTop_toBottomOf="@+id/eventCreationTitle"
         app:layout_constraintVertical_bias="0.0" />
 
-    <TextView
+    <EditText
         android:id="@+id/description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -100,7 +100,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/description" />
 
-    <TextView
+    <EditText
         android:id="@+id/dia"
         android:layout_width="130dp"
         android:layout_height="36dp"
@@ -115,7 +115,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/eventData" />
 
-    <TextView
+    <EditText
         android:id="@+id/hora"
         android:layout_width="129dp"
         android:layout_height="35dp"
@@ -130,7 +130,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/dia" />
 
-    <TextView
+    <EditText
         android:id="@+id/lugar"
         android:layout_width="127dp"
         android:layout_height="38dp"
