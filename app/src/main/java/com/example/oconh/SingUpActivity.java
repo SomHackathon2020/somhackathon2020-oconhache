@@ -18,7 +18,7 @@ public class SingUpActivity extends Activity {
     private Button register;
     private ImageView imageView;
 
-    private DBAdapter mDBAdapter;
+//    private DBAdapter mDBAdapter;
 
     private UserService userService = new UserService();
 
@@ -42,18 +42,16 @@ public class SingUpActivity extends Activity {
                 String password = user_password.getText().toString();
                 int age =  21;
                 String education = user_education.getText().toString();
-                int phone = Integer.valueOf(user_phone.getText().toString());
+                int phone = 2525;
                 String mail = user_mail.getText().toString();
 
                 try{
                     User user = new User(name,password,age, education, phone, mail);
                     userService.register(name,password,age, education, phone, mail);
-                    mDBAdapter = DBAdapter.getInstance(getApplicationContext());
-
-                    //mDBAdapter.getUser(user);
-                    System.out.println("hhh");
+                    Intent intent = new Intent(getApplicationContext(), EventsActivity.class);
+                    startActivity(intent);
                 }catch(Exception e){
-                    //e.getMessage();
+                    String message = e.getMessage();
                 }
             }
         });

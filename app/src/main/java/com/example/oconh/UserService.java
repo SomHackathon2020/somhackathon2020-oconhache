@@ -9,8 +9,12 @@ public class UserService {
     public void register(String name,String password,int age, String education, int phone, String mail) throws Exception{
 
         User user = new User(name,password,age, education, phone, mail);
-        if(this.checkUserNotExist(user)){ users.add(user); }
-        throw new Exception("User or password not valids");
+        if(this.checkUserNotExist(user)){
+            users.add(user);
+        }else{
+            throw new Exception("User or password not valids");
+        }
+
     }
 
     private boolean checkUserNotExist(User user){
