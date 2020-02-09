@@ -11,15 +11,18 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.google.android.material.navigation.NavigationView;
 
-public class MainActivity extends Activity {
+
+public class MainActivity extends Activity implements
+        NavigationView.OnNavigationItemSelectedListener{
 
     private UserService user_service = new UserService();
     private EditText user_name;
     private EditText user_password;
     private Button singIn;
     private Button singUp;
-
+    Intent  intent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,10 +61,36 @@ public class MainActivity extends Activity {
             }
         });
 
+        NavigationView mNavigationView = findViewById(R.id.nav_view);
+
+        if (mNavigationView != null) {
+            mNavigationView.setNavigationItemSelectedListener(this);
+        }
     }
+
+
+    @Override
+    public boolean onNavigationItemSelected(MenuItem item) {
+        // Handle navigation view item clicks here.
+
+        switch (item.getItemId()) {
+            case R.id.action_settings:
+                System.out.println("Click first item");
+                return true;
+            case R.id.nav_slideshow:
+                intent=new Intent(getApplicationContext(),eventCreator.class);
+                startActivity(intent);
+            default:
+                intent=new Intent(getApplicationContext(),eventCreator.class);
+                startActivity(intent);
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
+
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.main, menu);
         return true;
@@ -70,11 +99,20 @@ public class MainActivity extends Activity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle item selection
+        System.out.println("Click first item");
+        intent=new Intent(getApplicationContext(),eventCreator.class);
+        startActivity(intent);
+        System.out.println(item.getItemId());
         switch (item.getItemId()) {
             case R.id.action_settings:
                System.out.println("Click first item");
                 return true;
+            case R.id.nav_slideshow:
+                intent=new Intent(getApplicationContext(),eventCreator.class);
+                startActivity(intent);
             default:
+                intent=new Intent(getApplicationContext(),eventCreator.class);
+                startActivity(intent);
                 return super.onOptionsItemSelected(item);
         }
     }
