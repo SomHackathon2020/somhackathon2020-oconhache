@@ -1,16 +1,54 @@
 <resources>
     <string name="app_name">OCONH</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
+
+    //eventCreator
+    <string name="events">CREAR EVENTO</string>
+    <string name="tituloTemaCreator">INTRODUCE EL TEMA</string>
+    <string name="temaGeneralCreator">Tema General:</string>
+    <string name="temaCreator">Tema:</string>
+    <string name="descriptionCreator">Descripción: </string>
+    <string name="eventDataCreator">RELLENA LOS DATOS: </string>
+    <string name="diaCreator">Dia: </string>
+    <string name="horaCreator">Hora: </string>
+    <string name="lugarCreator">Lugar: </string>
+    <string name="aceptarButtonCreator">ACEPTAR</string>
+
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
-    <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
-    <string name="menu_tools">Tools</string>
-    <string name="menu_share">Share</string>
-    <string name="menu_send">Send</string>
+    //eventDetails
+    <string name="temaGeneral">TEMA GENERAL</string>
+    <string name="day"> DÍA: </string>
+    <string name="puntuation"> Valoración: </string>
+    <string name="tema"> TEMA: </string>
+    <string name="time"> HORA: </string>
+    <string name="place"> LUGAR: </string>
+    <string name="asistants"> NUMERO DE ASISTENTES: </string>
+    <string name="description"> Descripción detallada: </string>
+
+    <string name="userProfile">PERFIL</string>
+    <string name="action_perfil">Perfil</string>
+    <string name="action_inscription">Inscribirse</string>
+    <string name="action_event">Crear evento</string>
+    <string name="action_calendar">Calendario</string>
+
+    //SignUp
+    <string name="nameSignUp">Nombre:</string>
+    <string name="passwordSignUp">Contraseña:</string>
+    <string name="correoSignUp">Correo Electrónico:</string>
+    <string name="phoneSignUp">Teléfono:</string>
+    <string name="formationSignUp">Formación:</string>
+
+    //Calendario
+    <string name="calendarioTITULO">Calendario</string>
+
+
+    <string name="name">Nombre de usuario</string>
+    <string name="password">Contraseña</string>
+    <string name="hola">melocoton</string>
+
 </resources>

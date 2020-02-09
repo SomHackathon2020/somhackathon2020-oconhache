@@ -1,69 +1,172 @@
 package com.example.oconh;
-
+import android.app.Activity;
+import android.content.ContentValues;
+import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
-
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
-
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
+import android.widget.Button;
+import android.widget.EditText;
 
 import com.google.android.material.navigation.NavigationView;
 
-import androidx.drawerlayout.widget.DrawerLayout;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
+public class MainActivity extends Activity implements
+        NavigationView.OnNavigationItemSelectedListener{
 
-import android.view.Menu;
-
-public class MainActivity extends AppCompatActivity {
-
-    private AppBarConfiguration mAppBarConfiguration;
-
+    private UserService user_service = new UserService();
+    private EditText user_name;
+    private EditText user_password;
+    private Button singIn;
+    private Button singUp;
+    Intent  intent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //Mostrar logo
+        singUp=findViewById(R.id.singup);
+        Intent iin= getIntent();
+        Bundle b = iin.getExtras();
+        if(b==null) {
+            Intent intent = new Intent(getApplicationContext(), Logo.class);
+            startActivity(intent);
+        }
+
+
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        FloatingActionButton fab = findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+        singIn = (Button) findViewById(R.id.singin);
+        singUp = (Button) findViewById(R.id.singup);
+        user_name = (EditText) findViewById(R.id.name);
+        user_password = (EditText) findViewById(R.id.password);
+
+        singIn.setOnClickListener( new View.OnClickListener(){
+            public void onClick (View v){
+                try{
+                    user_service.singIn(user_name.getText().toString(), user_password.getText().toString());
+                    //Faltaria un intent aqui para cambiar de activity
+                }catch(Exception e){
+                    System.out.println('f');
+                    //Credentials are not valid, show a message with it and try again
+                }
             }
         });
-        DrawerLayout drawer = findViewById(R.id.drawer_layout);
-        NavigationView navigationView = findViewById(R.id.nav_view);
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
-        mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow,
-                R.id.nav_tools, R.id.nav_share, R.id.nav_send)
-                .setDrawerLayout(drawer)
-                .build();
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
-        NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
-        NavigationUI.setupWithNavController(navigationView, navController);
+
+        singUp.setOnClickListener( new View.OnClickListener(){
+            public void onClick (View v){
+                Intent intent=new Intent(getApplicationContext(),SingUpActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        NavigationView mNavigationView = findViewById(R.id.nav_view);
+
+        if (mNavigationView != null) {
+            mNavigationView.setNavigationItemSelectedListener(this);
+        }
     }
+
+
+    @Override
+    public boolean onNavigationItemSelected(MenuItem item) {
+        // Handle navigation view item clicks here.
+
+        switch (item.getItemId()) {
+            case R.id.action_settings:
+                System.out.println("Click first item");
+                return true;
+            case R.id.nav_slideshow:
+                intent=new Intent(getApplicationContext(),eventCreator.class);
+                startActivity(intent);
+            default:
+                intent=new Intent(getApplicationContext(),eventCreator.class);
+                startActivity(intent);
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
+
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main, menu);
         return true;
     }
 
     @Override
-    public boolean onSupportNavigateUp() {
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
-        return NavigationUI.navigateUp(navController, mAppBarConfiguration)
-                || super.onSupportNavigateUp();
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+        System.out.println("Click first item");
+        intent=new Intent(getApplicationContext(),eventCreator.class);
+        startActivity(intent);
+        System.out.println(item.getItemId());
+        switch (item.getItemId()) {
+            case R.id.action_settings:
+               System.out.println("Click first item");
+                return true;
+            case R.id.nav_slideshow:
+                intent=new Intent(getApplicationContext(),eventCreator.class);
+                startActivity(intent);
+            default:
+                intent=new Intent(getApplicationContext(),eventCreator.class);
+                startActivity(intent);
+                return super.onOptionsItemSelected(item);
+        }
     }
+
+
+
+
+    //METODOS BASE DE DATOS
+
+    public void writeSQLite(User user) {
+
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(MiBBDD.EntradaBBDD.COLUMNA1, user.getName());
+        contentValues.put(MiBBDD.EntradaBBDD.COLUMNA2, user.getPassword());
+
+        MiBBDD_Helper dbHelper = new MiBBDD_Helper(getApplicationContext());
+        SQLiteDatabase sqLiteDatabase = dbHelper.getWritableDatabase();
+
+        sqLiteDatabase.insert(MiBBDD.EntradaBBDD.TABLE_NAME, null, contentValues);
+        sqLiteDatabase.close();
+    }
+
+  //Posible ayuda para busqueda,caldria trasladar la lista de usuarioa aqui
+/*
+    public void searchSQLite(String columna, String valor) {
+        MiBBDD_Helper dbHelper = new MiBBDD_Helper(getApplicationContext());
+
+
+        // Query a SQLite
+        Log.i("SQLite", "cercar_nom_bbdd");
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        users = new ArrayList<>();
+        String[] columnas = {
+                MiBBDD.EntradaBBDD.COLUMNA2,
+                MiBBDD.EntradaBBDD.COLUMNA1,
+                 };
+        Cursor cursor = db.query( MiBBDD.EntradaBBDD.TABLE_NAME,
+                columnas,
+                columna + "=?",
+                new String[]{valor},
+                null,
+                null,
+                null);
+
+
+        while ( cursor.moveToNext() ) {
+            User users =  new User(
+                    cursor.getString(cursor.getColumnIndex(
+                            MiBBDD.EntradaBBDD.COLUMNA1)),
+                    cursor.getString(cursor.getColumnIndex(MiBBDD.EntradaBBDD.COLUMNA1)),
+                    cursor.getString(cursor.getColumnIndex(MiBBDD.EntradaBBDD.COLUMNA2));
+            users.add(user);
+        }
+        db.close();
+    }
+*/
 }
