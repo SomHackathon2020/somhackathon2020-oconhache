@@ -1,5 +1,6 @@
 package com.example.oconh;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.EventLog;
 import android.view.View;
@@ -45,6 +46,8 @@ public class EventsActivity extends AppCompatActivity {
 
                     eventService.register(day,description,hour,place,tema);
 
+                    Intent intent=new Intent(getApplicationContext(),EventsActivity.class);
+                    startActivity(intent);
                 }catch(Exception e){
 
                 }

@@ -2,6 +2,7 @@ package com.example.oconh;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -34,13 +35,18 @@ public class QueFuncioneEstoVa extends AppCompatActivity {
         lv1.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                //tv1.setText("La edad de " + lv1.getItemAtPosition(i) + " es " + edades[i] + " años" );
+                Intent intent=new Intent(getApplicationContext(),eventDetails.class);
+                startActivity(intent);
             }
         });
     }
     private ArrayList<Entidad> GeTarrayItems(){
         ArrayList<Entidad> listItems=new ArrayList<>();
-        //listItems.add(new Entidad(id foto,titulo, descripcion))
+        listItems.add(new Entidad("Dia 12","Quedada","22","Bcn","Programacion"));
+        listItems.add(new Entidad("Dia 21","Informacion","22","Bcn","Programacion"));
+        listItems.add(new Entidad("Dia 14","Quedada","22","Bcn","Programacion"));
+        listItems.add(new Entidad("Dia 15","Quedada","22","Bcn","Programacion"));
+        listItems.add(new Entidad("Dia 190","Quedada","22","Bcn","Programacion"));
         return listItems;
     }
 

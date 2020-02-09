@@ -43,9 +43,9 @@ public class Adaptador extends BaseAdapter {
         TextView titulo= convertView.findViewById(R.id.nombreEvento);
         TextView descripcion= convertView.findViewById(R.id.descripcionEvento);
 
-        imgFoto.setImageResource(item.getImgFoto());
-        titulo.setText(item.getTitulo());
-        descripcion.setText(item.getContenido());
+
+        titulo.setText(item.getTema());
+        descripcion.setText(item.getDescription());
 
 
         return convertView;
