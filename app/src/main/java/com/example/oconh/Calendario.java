@@ -1,16 +1,14 @@
 package com.example.oconh;
 
-import android.os.Bundle;
-
 import androidx.appcompat.app.AppCompatActivity;
 
-public class EventsActivity extends AppCompatActivity {
+import android.os.Bundle;
 
-
+public class Calendario extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_events);
+        setContentView(R.layout.activity_calendario);
     }
 }

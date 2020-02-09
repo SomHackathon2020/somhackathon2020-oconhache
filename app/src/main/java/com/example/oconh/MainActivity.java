@@ -24,7 +24,7 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //Mostrar logo
-
+        singUp=findViewById(R.id.singup);
         Intent iin= getIntent();
         Bundle b = iin.getExtras();
         if(b==null) {

@@ -30,9 +30,25 @@
     <string name="asistants"> NUMERO DE ASISTENTES: </string>
     <string name="description"> Descripción detallada: </string>
 
-
+    <string name="userProfile">PERFIL</string>
     <string name="action_perfil">Perfil</string>
     <string name="action_inscription">Inscribirse</string>
     <string name="action_event">Crear evento</string>
     <string name="action_calendar">Calendario</string>
+
+    //SignUp
+    <string name="nameSignUp">Nombre:</string>
+    <string name="passwordSignUp">Contraseña:</string>
+    <string name="correoSignUp">Correo Electrónico:</string>
+    <string name="phoneSignUp">Teléfono:</string>
+    <string name="formationSignUp">Formación:</string>
+
+    //Calendario
+    <string name="calendarioTITULO">Calendario</string>
+
+
+    <string name="name">Nombre de usuario</string>
+    <string name="password">Contraseña</string>
+    <string name="hola">melocoton</string>
+
 </resources>
