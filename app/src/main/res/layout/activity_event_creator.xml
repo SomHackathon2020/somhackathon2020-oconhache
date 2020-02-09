@@ -10,7 +10,7 @@
         android:id="@+id/eventCreationTitle"
         android:layout_width="414dp"
         android:layout_height="57dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="4dp"
         android:text="@string/events"
         android:textAlignment="center"
         android:textSize="30sp"
@@ -90,7 +90,7 @@
         android:layout_height="39dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="96dp"
+        android:layout_marginTop="56dp"
         android:layout_marginEnd="29dp"
         android:layout_marginRight="29dp"
         android:text="@string/eventDataCreator"
@@ -106,12 +106,12 @@
         android:layout_height="36dp"
         android:layout_marginStart="42dp"
         android:layout_marginLeft="42dp"
-        android:layout_marginTop="12dp"
         android:layout_marginEnd="240dp"
         android:layout_marginRight="240dp"
         android:editable="true"
         android:hint="@string/diaCreator"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/eventData" />
 
@@ -125,7 +125,7 @@
         android:layout_marginEnd="240dp"
         android:layout_marginRight="240dp"
         android:editable="true"
-        android:text="@string/horaCreator"
+        android:hint="@string/horaCreator"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/dia" />
@@ -154,10 +154,11 @@
         android:layout_marginLeft="2dp"
         android:layout_marginEnd="3dp"
         android:layout_marginRight="3dp"
-        android:layout_marginBottom="28dp"
+        android:layout_marginBottom="16dp"
         android:hint="@string/aceptarButtonCreator"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
