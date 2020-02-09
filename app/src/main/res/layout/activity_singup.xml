@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterActivity">
+    tools:context=".SingUpActivity">
 
     <TextView
         android:id="@+id/register"
-        android:layout_width="232dp"
-        android:layout_height="54dp"
+        android:layout_width="215dp"
+        android:layout_height="60dp"
         android:layout_marginStart="159dp"
         android:layout_marginLeft="159dp"
         android:layout_marginTop="110dp"
@@ -20,10 +20,10 @@
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.144"
+        app:layout_constraintHorizontal_bias="0.294"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.914"
+        app:layout_constraintVertical_bias="1.0"
         tools:text="REGISTRARSE" />
 
     <EditText
@@ -37,18 +37,17 @@
         android:layout_marginRight="182dp"
         android:layout_marginBottom="454dp"
         android:ems="10"
+        android:hint="@string/nameSignUp"
         android:inputType="textPersonName"
-        android:text="Nombre"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/register"
-        app:layout_constraintVertical_bias="0.0"
-        tools:text="Nombre" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/pasword"
+        android:id="@+id/passwordSignUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -58,35 +57,34 @@
         android:layout_marginRight="182dp"
         android:layout_marginBottom="394dp"
         android:ems="10"
+        android:hint="@string/passwordSignUp"
         android:inputType="textPersonName"
-        android:text="Contraseña"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name"
-        tools:text="Contraseña" />
+        app:layout_constraintTop_toBottomOf="@+id/name" />
 
     <EditText
-        android:id="@+id/gmail"
+        android:id="@+id/correoSignUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="18dp"
         android:layout_marginLeft="18dp"
-        android:layout_marginTop="21dp"
         android:layout_marginEnd="180dp"
         android:layout_marginRight="180dp"
         android:layout_marginBottom="20dp"
         android:ems="10"
+        android:hint="@string/correoSignUp"
         android:inputType="textPersonName"
-        android:text="Correo Electrónico"
-        app:layout_constraintBottom_toTopOf="@+id/phone"
+        app:layout_constraintBottom_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pasword"
-        tools:text="Correo Electrónico" />
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.508" />
 
     <EditText
-        android:id="@+id/phone"
+        android:id="@+id/phoneSignUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="18dp"
@@ -95,30 +93,29 @@
         android:layout_marginRight="180dp"
         android:layout_marginBottom="263dp"
         android:ems="10"
+        android:hint="@string/phoneSignUp"
         android:inputType="phone"
-        android:text="Teléfono"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:text="Teléfono" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/formation"
-        android:layout_width="357dp"
-        android:layout_height="136dp"
+        android:id="@+id/formationSignUp"
+        android:layout_width="339dp"
+        android:layout_height="161dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="22dp"
+        android:layout_marginTop="36dp"
         android:layout_marginEnd="38dp"
         android:layout_marginRight="38dp"
         android:ems="10"
+        android:hint="@string/formationSignUp"
         android:inputType="textPersonName"
-        android:text="Formación"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/phone"
-        tools:text="Formación" />
+        app:layout_constraintTop_toBottomOf="@+id/phoneSignUp" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -140,13 +137,14 @@
         android:layout_height="39dp"
         android:layout_marginStart="38dp"
         android:layout_marginLeft="38dp"
-        android:layout_marginTop="29dp"
+        android:layout_marginTop="424dp"
         android:layout_marginEnd="47dp"
         android:layout_marginRight="47dp"
-        android:text="REGISTRAR"
+        android:text="Button"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/formation"
+        app:layout_constraintTop_toBottomOf="@+id/formationSignUp"
         tools:text="REGISTRAR" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
