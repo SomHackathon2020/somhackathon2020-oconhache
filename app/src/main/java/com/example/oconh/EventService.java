@@ -14,10 +14,11 @@ public class EventService {
         return eventService;
     }
 
-    public void register(String day, String description, String hour, String place, String tema){
+    public boolean register(String day, String description, String hour, String place, String tema){
 
         Entidad event = new Entidad(day,description,hour,place,tema);
         events.add(event);
+        return true;
     }
 
     public ArrayList<Entidad> getEvents() {

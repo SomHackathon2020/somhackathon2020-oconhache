@@ -41,6 +41,9 @@ public class QueFuncioneEstoVa extends AppCompatActivity {
         });
     }
     private ArrayList<Entidad> GeTarrayItems(){
+        ArrayList events = EventService.getInstance().getEvents();
+        return events;
+        /*
         ArrayList<Entidad> listItems=new ArrayList<>();
         listItems.add(new Entidad("Dia 12","Quedada","22","Bcn","Programacion"));
         listItems.add(new Entidad("Dia 21","Informacion","22","Bcn","Programacion"));
@@ -48,6 +51,8 @@ public class QueFuncioneEstoVa extends AppCompatActivity {
         listItems.add(new Entidad("Dia 15","Quedada","22","Bcn","Programacion"));
         listItems.add(new Entidad("Dia 190","Quedada","22","Bcn","Programacion"));
         return listItems;
+
+         */
     }
 
 }
