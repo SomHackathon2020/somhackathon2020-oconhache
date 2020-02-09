@@ -7,6 +7,19 @@
     tools:context=".eventDetails">
 
     <TextView
+        android:id="@+id/people_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginLeft="26dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginBottom="33dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/description"
+        app:layout_constraintStart_toEndOf="@+id/asists"
+        app:layout_constraintTop_toBottomOf="@+id/puntuation" />
+
+    <TextView
         android:id="@+id/temaGeneralDetails"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -40,6 +53,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/day"
         tools:text="TEMA:" />
+
+
 
     <TextView
         android:id="@+id/day"
@@ -172,5 +187,66 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/description" />
+
+    <TextView
+        android:id="@+id/day_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="45dp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginEnd="106dp"
+        android:layout_marginRight="106dp"
+        android:layout_marginBottom="145dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/asists"
+        app:layout_constraintEnd_toStartOf="@+id/puntuation"
+        app:layout_constraintStart_toEndOf="@+id/day" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="29dp"
+        android:layout_marginLeft="29dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="100dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/asists"
+        app:layout_constraintStart_toEndOf="@+id/tema"
+        app:layout_constraintTop_toBottomOf="@+id/day_value" />
+
+    <TextView
+        android:id="@+id/hour_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="67dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/asists"
+        app:layout_constraintStart_toEndOf="@+id/time"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+    <TextView
+        android:id="@+id/lugar_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="113dp"
+        tools:layout_editor_absoluteY="381dp" />
+
+    <TextView
+        android:id="@+id/puntuation_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="251dp"
+        android:layout_marginBottom="461dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/puntuation"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

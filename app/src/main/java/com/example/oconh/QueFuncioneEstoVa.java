@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 public class QueFuncioneEstoVa extends AppCompatActivity {
@@ -36,10 +37,18 @@ public class QueFuncioneEstoVa extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Intent intent=new Intent(getApplicationContext(),eventDetails.class);
+                Entidad event = EventService.getInstance().getEvents().get(i);
+                intent.putExtra("day",event.getDay() );
+                intent.putExtra("hour",event.getHour() );
+                intent.putExtra("tema",event.getTema() );
+                intent.putExtra("description",event.getDescription() );
+                intent.putExtra("place",event.getPlace() );
                 startActivity(intent);
             }
         });
     }
+
+
     private ArrayList<Entidad> GeTarrayItems(){
         ArrayList events = EventService.getInstance().getEvents();
         return events;

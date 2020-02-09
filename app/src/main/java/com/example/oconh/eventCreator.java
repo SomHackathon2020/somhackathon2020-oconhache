@@ -20,20 +20,7 @@ public class eventCreator extends AppCompatActivity {
     private EventService eventService;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        /*
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_event_creator);
-        aceptarButtonCreator=findViewById(R.id.aceptarButton);
-        aceptarButtonCreator.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(getApplicationContext(),QueFuncioneEstoVa.class);
-                startActivity(intent);
-            }
-        });
-         */
-
-
+        
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_event_creator);
 
@@ -60,7 +47,6 @@ public class eventCreator extends AppCompatActivity {
 
 
                     Intent intent=new Intent(getApplicationContext(),QueFuncioneEstoVa.class);
-                    //Intent intent=new Intent(getApplicationContext(),EventsActivity.class);
                     startActivity(intent);
                 }catch(Exception e){
 
